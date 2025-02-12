@@ -1,3 +1,4 @@
+// ApiFunctions.jsx
 const productionUrl = "https://dipakshrestha1.com.np";
 
 export const FetchData = async ({ url, token, id }) => {

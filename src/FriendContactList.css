@@ -1,76 +1,115 @@
-.contact-list-container {
-    width: 400px;
-    margin: 0 auto;
-    font-family: Arial, sans-serif;
-  }
-  
-  h1, h2 {
-    text-align: center;
-    color: #333;
-  }
-  
-  .form-field {
-    margin-bottom: 15px;
-  }
-  
-  input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
-  }
-  
-  .submit-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .submit-btn:hover {
-    background-color: #45a049;
-  }
-  
-  .contact-list {
-    list-style: none;
-    padding: 0;
-  }
-  
-  .contact-item {
-    display: flex;
-    justify-content: space-between;
-    background-color: #f9f9f9;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-  
-  .actions button {
-    margin-left: 5px;
-    padding: 5px 10px;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .edit-btn {
-    background-color: #007bff;
-    color: white;
-  }
-  
-  .edit-btn:hover {
-    background-color: #0056b3;
-  }
-  
-  .delete-btn {
-    background-color: #ff4d4d;
-    color: white;
-  }
-  
-  .delete-btn:hover {
-    background-color: #cc0000;
-  }
-  
+/* FriendContactList.css */
+body {
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(to right, #4facfe, #00f2fe);
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
 
+.contact-list-container {
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 450px;
+  width: 100%;
+  animation: fadeIn 1s ease-in-out;
+  display: flex;
+  flex-direction: column; /* Change to column to stack items vertically */
+  justify-content: space-between; /* Distribute space between content and logout button */
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-grow: 1; /* Allows header to take up remaining space */
+}
+
+.logout-btn {
+  background: crimson;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.2s;
+  margin-top: 10px; /* Adds space above logout button */
+}
+
+.logout-btn:hover {
+  transform: scale(1.1);
+}
+
+.contact-form input {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.submit-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px;
+  width: 100%;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out;
+}
+
+.submit-btn:hover {
+  transform: scale(1.05);
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+}
+
+.contact-item {
+  background: #f4f4f4;
+  padding: 12px;
+  margin-bottom: 8px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeInUp 0.5s ease-in-out;
+}
+
+.edit-btn, .delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 5px;
+  transition: transform 0.3s;
+}
+
+.edit-btn:hover {
+  color: #f39c12;
+  transform: scale(1.2);
+}
+
+.delete-btn:hover {
+  color: crimson;
+  transform: scale(1.2);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(15px); }
+  to { opacity: 1; transform: translateY(0); }
+}
