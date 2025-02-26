@@ -1,6 +1,6 @@
 {
   "projects": {
-    "default": "deadthbridge",
+    "default": "snapbases",
     "Coder": "deadthbridge",
     "hosting": "snapbases"
   },

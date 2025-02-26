@@ -2,9 +2,17 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background: linear-gradient(to right, #4facfe, #00f2fe); /* Gradient background */
-  font-family: 'Arial', sans-serif;
+  height: auto;
+  width: 400px;
+  padding: 20px;
+  background: linear-gradient(
+    to right,
+    #4facfe,
+    #00f2fe
+  ); /* Gradient background */
+  font-family: "Arial", sans-serif;
+  background-size: 200% 200%;
+  animation: gradient 2s ease infinite;
 }
 
 .login-container {
@@ -15,6 +23,7 @@
   width: 100%;
   max-width: 400px;
   text-align: center;
+  box-sizing: border-box;
 }
 
 .login-form h2 {
@@ -22,26 +31,33 @@
   color: #1877f2;
   font-size: 28px; /* Increased font size */
   font-weight: bold; /* Bold font */
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .input-container {
   margin-bottom: 20px; /* Increased margin */
   text-align: left;
+  position: relative;
 }
 
 .input-container input {
   width: 100%;
   padding: 12px; /* Increased padding */
-  border: 1px solid #dddfe2;
+  border: 1px solid red;
   border-radius: 8px; /* More rounded corners */
   font-size: 16px;
   outline: none;
   transition: border-color 0.3s, box-shadow 0.3s; /* Added transition */
+  box-sizing: border-box;
 }
 
 .input-container input:focus {
   border-color: #1877f2;
   box-shadow: 0 0 0 2px rgba(24, 119, 242, 0.2);
+}
+
+.input-container input:focus::placeholder {
+  color: transparent;
 }
 
 .error {
@@ -52,11 +68,13 @@
   background-color: #ffe6e6; /* Light background for errors */
   padding: 5px; /* Padding for error messages */
   border: 1px solid #ff0000; /* Border for error messages */
+  border-radius: 5px;
 }
 
 .login-form button {
-  width: 100%;
-  padding: 12px; /* Increased padding */
+  width: 120px;
+  padding: 5px 10px; /* Increased padding */
+  height: 35px;
   background-color: #1877f2;
   color: white;
   border: none;
@@ -64,6 +82,7 @@
   font-size: 16px;
   cursor: pointer;
   transition: background-color 0.3s, transform 0.2s; /* Added transform transition */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .login-form button:hover {
@@ -87,6 +106,19 @@
 }
 
 .signup-link a {
-  color: #1877f2;
-  text-decoration: none;
+  color: blue;
+  text-transform: capitalize;
+  text-decoration: underline;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
